@@ -1,0 +1,1 @@
+URL_REGISTER_PAGE = 'https://stellarburgers.nomoreparties.site/register'
