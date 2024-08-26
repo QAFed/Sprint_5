@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -5,12 +7,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 from LINKS import URLpage
 from LINKS import RegisterXpath
-from LINKS import RegisterCSS
+from LINKS import StartXpath
 from LINKS import LoginXpath
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from conftest import LoginPassName
+
 
 
 class LoginPassName():
@@ -46,8 +48,9 @@ def reg_new_user():
     else:
         raise Exception
 
-
-def driver_with_login_user(new_user):
+@pytest.fixture
+def driver_with_login_user():
+    new_user = reg_new_user()
     service = ChromeService(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
     driver.get(URLpage.LOGIN)
@@ -56,9 +59,10 @@ def driver_with_login_user(new_user):
     driver.find_element(By.XPATH, LoginXpath.email).send_keys(new_user.email)
     driver.find_element(By.XPATH, LoginXpath.password).send_keys(new_user.password)
     driver.find_element(By.XPATH, LoginXpath.button_login).click()
+    WebDriverWait(driver, 10).until(
+        expected_conditions.visibility_of_element_located((By.XPATH, StartXpath.button_order)))
     if driver.current_url == URLpage.START:
         yield driver
         driver.quit()
     else:
         raise Exception
-
