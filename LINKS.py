@@ -2,6 +2,8 @@ class URLpage:
     REGISTER = 'https://stellarburgers.nomoreparties.site/register'
     LOGIN = 'https://stellarburgers.nomoreparties.site/login'
     START = 'https://stellarburgers.nomoreparties.site/'
+    FORGOT = 'https://stellarburgers.nomoreparties.site/forgot-password'
+
 class RegisterXpath:
     name = '/html/body/div/div/main/div/form/fieldset[1]/div/div/input'
     email = '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
@@ -19,3 +21,7 @@ class LoginXpath:
 class StartXpath:
     button_login = '/html/body/div/div/main/section[2]/div/button[text()="Войти в аккаунт"]'
     button_personal_account = '/html/body/div/div/header/nav/a/p[text()="Личный Кабинет"]'
+
+
+class ForgotXpath:
+    link_to_login = '/html/body/div/div/main/div/div/p/a[text()="Войти"]'
