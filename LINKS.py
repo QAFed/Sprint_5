@@ -18,4 +18,4 @@ class LoginXpath:
 
 class StartXpath:
     button_login = '/html/body/div/div/main/section[2]/div/button[text()="Войти в аккаунт"]'
-
+    button_personal_account = '/html/body/div/div/header/nav/a/p[text()="Личный Кабинет"]'
