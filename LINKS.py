@@ -17,6 +17,8 @@ class RegisterCSS:
 
 class LoginXpath:
     button_login = '//button[text()="Войти"]'
+    email = '/html/body/div/div/main/div/form/fieldset[1]/div/div/input'
+    password = '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
 
 class StartXpath:
     button_login = '/html/body/div/div/main/section[2]/div/button[text()="Войти в аккаунт"]'
