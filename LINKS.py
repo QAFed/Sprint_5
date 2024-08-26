@@ -7,9 +7,12 @@ class RegisterXpath:
     email = '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
     password = '/html/body/div/div/main/div/form/fieldset[3]/div/div/input'
     button_register = '/html/body/div/div/main/div/form/button[text()="Зарегистрироваться"]'
+    link_to_login = '/html/body/div/div/main/div/div/p/a[text()="Войти"]'
 
 class RegisterCSS:
     pass_field_alert = '#root > div > main > div > form > fieldset:nth-child(3) > div > p'
 
+
 class LoginXpath:
     button_login = '//button[text()="Войти"]'
+
