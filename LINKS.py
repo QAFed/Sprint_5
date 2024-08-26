@@ -1,7 +1,7 @@
 class URLpage:
     REGISTER = 'https://stellarburgers.nomoreparties.site/register'
     LOGIN = 'https://stellarburgers.nomoreparties.site/login'
-
+    START = 'https://stellarburgers.nomoreparties.site/'
 class RegisterXpath:
     name = '/html/body/div/div/main/div/form/fieldset[1]/div/div/input'
     email = '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
@@ -15,4 +15,7 @@ class RegisterCSS:
 
 class LoginXpath:
     button_login = '//button[text()="Войти"]'
+
+class StartXpath:
+    button_login = '/html/body/div/div/main/section[2]/div/button[text()="Войти в аккаунт"]'
 
