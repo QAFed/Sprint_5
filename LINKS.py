@@ -25,7 +25,12 @@ class StartXpath:
     button_login = '/html/body/div/div/main/section[2]/div/button[text()="Войти в аккаунт"]'
     button_personal_account = '/html/body/div/div/header/nav/a/p[text()="Личный Кабинет"]'
     button_order = '//button[text()="Оформить заказ"]'
-
+    button_bulki = '/html/body/div/div/main/section[1]/div[1]/div[1]'
+    button_sousi = '/html/body/div/div/main/section[1]/div[1]/div[2]'
+    button_nachinki = '/html/body/div/div/main/section[1]/div[1]/div[3]'
+    header_bulki = '/html/body/div/div/main/section[1]/div[2]/h2[1]'
+    header_sousi = '/html/body/div/div/main/section[1]/div[2]/h2[2]'
+    header_nachinki = '/html/body/div/div/main/section[1]/div[2]/h2[3]'
 class ForgotXpath:
     link_to_login = '/html/body/div/div/main/div/div/p/a[text()="Войти"]'
 
