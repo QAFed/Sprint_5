@@ -33,3 +33,5 @@ class PersonXpath:
     login = '/html/body/div/div/main/div/div/div/ul/li[2]/div/div/input'
     link_to_constructor = '/html/body/div/div/header/nav/ul/li[1]/a/p[text()="Конструктор"]'
     logo_stellar = '/html/body/div/div/header/nav/div/a'
+    button_exit = '/html/body/div/div/main/div/nav/ul/li[3]/button'
+
