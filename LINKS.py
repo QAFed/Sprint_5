@@ -26,11 +26,12 @@ class StartXpath:
     button_personal_account = '/html/body/div/div/header/nav/a/p[text()="Личный Кабинет"]'
     button_order = '//button[text()="Оформить заказ"]'
     button_bulki = '/html/body/div/div/main/section[1]/div[1]/div[1]'
+    button_bulki_activated = '/html/body/div/div/main/section[1]/div[1]/div[1][contains(@class,"current")]'
     button_sousi = '/html/body/div/div/main/section[1]/div[1]/div[2]'
+    button_sousi_activated = '/html/body/div/div/main/section[1]/div[1]/div[2][contains(@class,"current")]'
     button_nachinki = '/html/body/div/div/main/section[1]/div[1]/div[3]'
-    header_bulki = '/html/body/div/div/main/section[1]/div[2]/h2[1]'
-    header_sousi = '/html/body/div/div/main/section[1]/div[2]/h2[2]'
-    header_nachinki = '/html/body/div/div/main/section[1]/div[2]/h2[3]'
+    button_nachinki_activated = '/html/body/div/div/main/section[1]/div[1]/div[3][contains(@class,"current")]'
+
 class ForgotXpath:
     link_to_login = '/html/body/div/div/main/div/div/p/a[text()="Войти"]'
 
