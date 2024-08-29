@@ -54,4 +54,3 @@ def test_button_exit_click_logout(driver_with_login_user):
     WebDriverWait(driver_with_login_user, 10).until(
         expected_conditions.visibility_of_element_located((By.XPATH, LoginXpath.button_login)))
     assert driver_with_login_user.current_url == URLpage.LOGIN
-

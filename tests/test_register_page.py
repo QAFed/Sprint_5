@@ -1,4 +1,3 @@
-import time
 from LINKS import URLpage
 from LINKS import RegisterXpath
 from LINKS import RegisterCSS
@@ -7,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from conftest import LoginPassName
+
 
 def test_register_form_if_name_email_pass_correct_go_auth_page(driver):
     new_user = LoginPassName()
@@ -36,6 +36,7 @@ def test_alert_text_if_pass_less_than_6_char(driver):
         expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, RegisterCSS.pass_field_alert)))
     alert_text = driver.find_element(By.CSS_SELECTOR, RegisterCSS.pass_field_alert).text
     assert alert_text == 'Некорректный пароль'
+
 
 def test_link_login_if_click_open_login_page(driver):
     driver.get(URLpage.REGISTER)

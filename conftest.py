@@ -1,4 +1,3 @@
-import time
 
 import pytest
 from selenium import webdriver
@@ -14,13 +13,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 
-
-class LoginPassName():
+class LoginPassName:
     def __init__(self):
         self.gen_id = datetime.now().strftime("%Y%m%d%H%M%S")
         self.name = f"name{self.gen_id}"
         self.email = f"FedorIdolenkov_{self.gen_id}@ya.ya"
         self.password = f"psswrd{self.gen_id}"
+
 
 @pytest.fixture
 def driver():
@@ -47,6 +46,7 @@ def reg_new_user():
         return new_user
     else:
         raise Exception
+
 
 @pytest.fixture
 def driver_with_login_user():
