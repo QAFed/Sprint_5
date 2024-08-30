@@ -17,11 +17,8 @@ class StartXpath:
     button_login = '//button[text()="Войти в аккаунт"]'
     button_personal_account = '//p[text()="Личный Кабинет"]'
     button_order = '//button[text()="Оформить заказ"]'
-    # button_bulki = '//span[text()="Булки"]'
     button_bulki_activated = '//span[text()="Булки"]/parent::div'
-    # button_sousi = '//span[text()="Соусы"]'
     button_sousi_activated = '//span[text()="Соусы"]/parent::div'
-    # button_nachinki = '//span[text()="Начинки"]'
     button_nachinki_activated = '//span[text()="Начинки"]/parent::div'
 
 
