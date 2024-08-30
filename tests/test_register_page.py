@@ -32,8 +32,8 @@ def test_alert_text_if_pass_less_than_6_char(driver):
     driver.find_element(By.XPATH, RegisterXpath.password).send_keys(bad_pass)
     driver.find_element(By.XPATH, RegisterXpath.button_register).click()
     WebDriverWait(driver, 10).until(
-        expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, RegisterXpath.pass_field_alert)))
-    alert_text = driver.find_element(By.CSS_SELECTOR, RegisterXpath.pass_field_alert).text
+        expected_conditions.visibility_of_element_located((By.XPATH, RegisterXpath.pass_field_alert)))
+    alert_text = driver.find_element(By.XPATH, RegisterXpath.pass_field_alert).text
     assert alert_text == 'Некорректный пароль'
 
 

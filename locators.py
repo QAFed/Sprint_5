@@ -1,7 +1,7 @@
 class RegisterXpath:
-    name = '//label[text()="Имя"]'
-    email = '//label[text()="Email"]'
-    password = '//label[text()="Пароль"]'
+    name = '//label[text()="Имя"]/parent::div/input'
+    email = '//label[text()="Email"]/parent::div/input'
+    password = '//label[text()="Пароль"]/parent::div/input'
     button_register = '//button[text()="Зарегистрироваться"]'
     link_to_login = '//a[@href="/login"]'
     pass_field_alert = '//p[contains(@class, "error text")]'
@@ -9,8 +9,8 @@ class RegisterXpath:
 
 class LoginXpath:
     button_login = '//button[text()="Войти"]'
-    email = '//label[text()="Email"]'
-    password = '//label[text()="Пароль"]'
+    email = '//label[text()="Email"]/parent::div/input'
+    password = '//label[text()="Пароль"]/parent::div/input'
 
 
 class StartXpath:
