@@ -28,17 +28,19 @@ class TestConstructorPage:
             expected_conditions.visibility_of_element_located((By.XPATH, LoginXpath.button_login)))
         assert driver.current_url == URLpage.LOGIN
 
-    @pytest.mark.parametrize('xpath, xpath_active', [
-        (StartXpath.button_bulki, StartXpath.button_bulki_activated),
-        (StartXpath.button_sousi, StartXpath.button_sousi_activated),
-        (StartXpath.button_nachinki, StartXpath.button_nachinki_activated)
+    @pytest.mark.parametrize('xpath', [
+        StartXpath.button_sousi_activated,
+        StartXpath.button_nachinki_activated
         ])
-    def test_button_nachinki_scroll_to_header(self, driver, xpath, xpath_active):
+    def test_button_nachinki_i_sousi_scroll_to_header(self, driver, xpath):
         driver.get(URLpage.START)
         WebDriverWait(driver, 10).until(
             expected_conditions.visibility_of_element_located((By.XPATH, StartXpath.button_personal_account)))
-        try:
-            driver.find_element(By.XPATH, xpath).click()
-        except Exception:
-            print("Булки выбраны по дефолту")
-        assert driver.find_element(By.XPATH, xpath_active)
+        driver.find_element(By.XPATH, xpath).click()
+        assert driver.find_element(By.XPATH, xpath)
+
+    def test_button_bulki_scroll_to_header(self, driver):
+        driver.get(URLpage.START)
+        WebDriverWait(driver, 10).until(
+            expected_conditions.visibility_of_element_located((By.XPATH, StartXpath.button_personal_account)))
+        assert driver.find_element(By.XPATH, StartXpath.button_bulki_activated)
