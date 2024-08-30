@@ -3,7 +3,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from datetime import datetime
 from links import URLpage
 from locators import RegisterXpath
 from locators import StartXpath
@@ -11,14 +10,7 @@ from locators import LoginXpath
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-
-
-class LoginPassName:
-    def __init__(self):
-        self.gen_id = datetime.now().strftime("%Y%m%d%H%M%S")
-        self.name = f"name{self.gen_id}"
-        self.email = f"FedorIdolenkov_{self.gen_id}@ya.ya"
-        self.password = f"psswrd{self.gen_id}"
+from helpers import LoginPassName
 
 
 @pytest.fixture
