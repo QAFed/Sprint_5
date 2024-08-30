@@ -4,6 +4,3 @@ class URLpage:
     LOGIN = START+'login'
     FORGOT = START+'forgot-password'
     PERSON = START+'account/profile'
-
-
-

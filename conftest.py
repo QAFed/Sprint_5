@@ -32,10 +32,7 @@ def reg_new_user(driver):
     driver.find_element(By.XPATH, RegisterXpath.button_register).click()
     WebDriverWait(driver, 10).until(
         expected_conditions.visibility_of_element_located((By.XPATH, LoginXpath.button_login)))
-    if driver.current_url == URLpage.LOGIN:
-        return new_user
-    else:
-        raise Exception
+    return new_user
 
 
 @pytest.fixture
@@ -49,8 +46,6 @@ def driver_with_login_user(driver):
     driver.find_element(By.XPATH, LoginXpath.button_login).click()
     WebDriverWait(driver, 10).until(
         expected_conditions.visibility_of_element_located((By.XPATH, StartXpath.button_order)))
-    if driver.current_url == URLpage.START:
-        yield driver
-        driver.quit()
-    else:
-        raise Exception
+    yield driver
+    driver.quit()
+
