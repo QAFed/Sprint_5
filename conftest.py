@@ -21,10 +21,8 @@ def driver():
     web_driver.quit()
 
 
-def reg_new_user():
+def reg_new_user(driver):
     new_user = LoginPassName()
-    service = ChromeService(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
     driver.get(URLpage.REGISTER)
     WebDriverWait(driver, 10).until(
         expected_conditions.visibility_of_element_located((By.XPATH, RegisterXpath.name)))
@@ -41,10 +39,8 @@ def reg_new_user():
 
 
 @pytest.fixture
-def driver_with_login_user():
-    new_user = reg_new_user()
-    service = ChromeService(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
+def driver_with_login_user(driver):
+    new_user = reg_new_user(driver)
     driver.get(URLpage.LOGIN)
     WebDriverWait(driver, 10).until(
         expected_conditions.visibility_of_element_located((By.XPATH, LoginXpath.button_login)))
