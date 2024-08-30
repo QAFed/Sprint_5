@@ -43,3 +43,4 @@ class TestRegisterPage:
             expected_conditions.visibility_of_element_located((By.XPATH, LoginXpath.button_login)))
         assert driver.current_url == URLpage.LOGIN
 
+
