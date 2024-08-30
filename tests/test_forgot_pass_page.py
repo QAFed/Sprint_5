@@ -1,9 +1,9 @@
 from links import URLpage
-from links import ForgotXpath
+from locators import ForgotXpath
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from links import LoginXpath
+from locators import LoginXpath
 
 
 def test_link_login_if_click_oopen_login_page(driver):

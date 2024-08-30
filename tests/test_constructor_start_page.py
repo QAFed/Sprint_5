@@ -3,10 +3,10 @@ import pytest
 
 from links import URLpage
 from selenium.webdriver.common.by import By
-from links import StartXpath
+from locators import StartXpath
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from links import LoginXpath
+from locators import LoginXpath
 
 
 def test_button_login_if_click_open_login_page(driver):
