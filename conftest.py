@@ -4,10 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
-from LINKS import URLpage
-from LINKS import RegisterXpath
-from LINKS import StartXpath
-from LINKS import LoginXpath
+from links import URLpage
+from links import RegisterXpath
+from links import StartXpath
+from links import LoginXpath
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
